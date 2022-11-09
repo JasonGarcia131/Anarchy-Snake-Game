@@ -17,7 +17,9 @@
     }
 
     button{
-      width: 20%;
+      width: 30%;
+      margin: 10px;
+      font-weight: 900;
     }
 
     #game-board {
@@ -39,33 +41,31 @@
       border: .25vmin solid black;
     }
 
-    #upDown{
-      display: flex;
-      flex-direction: column;
-      justify-content:center;
+    .btnWrapper{
       width: 10%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-
     #leftRight{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content:space-between;
     }
 
   </style>
   <script src="game.js" defer type="module"></script>
 </head>
 <body>
-  <div id="upDown">
-    <button class="arrows" id="up">Up</button>
-    <div id="leftRight">
-      <button class="arrows" id="down">Down</button>
-      <button class="arrows" id="left">Left</button>
-    </div>
-    <button class="arrows" id="right">Right</button>
-  </div>
-  
   <div id="game-board"></div>
+  <div class="btnWrapper">
+    <button class="arrows" id="up" >&#8593</button>
+    <div class="leftRight">
+      <button class="arrows" id="left">&#8592</button>
+      <button class="arrows" id="right">&#8594</button>
+    </div>
+    <button class="arrows" id="down" >&#8595</button>
+  </div>
 </body>
 </html>
