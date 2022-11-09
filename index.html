@@ -16,6 +16,10 @@
       background-color: black;
     }
 
+    button{
+      width: 20%;
+    }
+
     #game-board {
       background-color: #CCC;
       width: 100vmin;
@@ -34,10 +38,34 @@
       background-color: hsl(50, 100%, 50%);
       border: .25vmin solid black;
     }
+
+    #upDown{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      width: 10%;
+      text-align: center;
+    }
+
+    #leftRight{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
   </style>
   <script src="game.js" defer type="module"></script>
 </head>
 <body>
+  <div id="upDown">
+    <button class="arrows" id="up">Up</button>
+    <div id="leftRight">
+      <button class="arrows" id="down">Down</button>
+      <button class="arrows" id="left">Left</button>
+    </div>
+    <button class="arrows" id="right">Right</button>
+  </div>
+  
   <div id="game-board"></div>
 </body>
 </html>
