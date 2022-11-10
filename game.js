@@ -8,7 +8,7 @@ const gameBoard = document.getElementById('game-board');
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm(`You're drunk, go home playerID:${Date.now()} -Alan`)) {
+    if (confirm(`"You're drunk, go home playerID:${Date.now()}." -Alan`)) {
       window.location.href = "/Anarchy-Snake-Game/Home.html"
     }
     return

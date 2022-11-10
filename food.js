@@ -19,16 +19,16 @@ let popUpMessage = document.getElementById('popUpMessage');
 export function popUp(){
   switch(scoreCount){
     case 1:
-      popUpMessage.textContent = "Hey! Stop drinking leftovers! -Bam";
+      popUpMessage.textContent = `"Hey! Stop drinking leftovers!" -Bam`;
       break;
     case 2:
-      popUpMessage.textContent = "ALAN! He's being weird again... -Amy ";
+      popUpMessage.textContent = `"ALAN! He's being weird again..." -Amy `;
       break;
     case 5:
-      popUpMessage.textContent = "ALAAAN!. He started a mob!!";
+      popUpMessage.textContent = `"ALAAAN!. He started a mob!!"`;
       break;
     case 7:
-      popUpMessage.textContent = "He cannot be stopped";
+      popUpMessage.textContent = `"He cannot be stopped"`;
       break;
   }
 }
