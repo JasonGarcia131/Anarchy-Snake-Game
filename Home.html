@@ -6,11 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="game.js" defer type="module"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        .homepageBackground{
+            width: 50%;
+            height: 100vh;
+            text-align: center;
+            margin: 0 auto;
+            border: 2px solid red;
+            background-image: url("./images/homepage.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .homePageBox{
+            position: relative;
+            top: 25%;
+            background-color: grey;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Objective: </h1>
-    <p> Drink all the left-over beers before you get kicked out by Alan.</p>
-    <a href="/Anarchy-Snake-Game/index.html">Start</a>
+    <div class="homepageBackground">
+        <div class="homePageBox">
+            <h1>Objective: </h1>
+            <p> Drink all the left-over beers before Alan kicks you out.</p>
+            <a href="/Anarchy-Snake-Game/index.html">Start</a>
+        </div>
+      
+    </div>
+    
 </body>
 </html>

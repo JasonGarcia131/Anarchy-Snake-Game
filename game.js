@@ -4,11 +4,11 @@ import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
-const gameBoard = document.getElementById('game-board')
+const gameBoard = document.getElementById('game-board');
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm('You lost. Press ok to restart.')) {
+    if (confirm(`You're drunk, go home playerID:${Date.now()} -Alan`)) {
       window.location.href = "/Anarchy-Snake-Game/Home.html"
     }
     return
