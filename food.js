@@ -22,7 +22,7 @@ export function popUp(){
       popUpMessage.textContent = "Hey! Stop drinking leftovers! -Bam";
       break;
     case 2:
-      popUpMessage.textContent = "ALAN! He's being wierd again... -Amy ";
+      popUpMessage.textContent = "ALAN! He's being weird again... -Amy ";
       break;
     case 5:
       popUpMessage.textContent = "ALAAAN!. He started a mob!!";
