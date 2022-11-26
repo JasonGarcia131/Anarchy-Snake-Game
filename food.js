@@ -3,12 +3,12 @@ import { randomGridPosition } from './grid.js'
 
 
 let food = getRandomFoodPosition();
-let scoreCount = 0;
-const EXPANSION_RATE = 5
+let scoreCounter = 0;
+const EXPANSION_RATE = 1
 
 export function update() {
   if (onSnake(food)) {
-    scoreCount+=1
+    scoreCounter+=1
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
     popUp()
@@ -17,7 +17,7 @@ export function update() {
 
 let popUpMessage = document.getElementById('popUpMessage');
 export function popUp(){
-  switch(scoreCount){
+  switch(scoreCounter){
     case 1:
       popUpMessage.textContent = `"Hey! Stop drinking leftovers!" -Bam`;
       break;
@@ -28,7 +28,7 @@ export function popUp(){
       popUpMessage.textContent = `"ALAAAN!. He started a mob!!"`;
       break;
     case 7:
-      popUpMessage.textContent = `"He cannot be stopped"`;
+      popUpMessage.textContent = `"It's time to go..."`;
       break;
   }
 }
@@ -36,9 +36,10 @@ export function popUp(){
 export function draw(gameBoard) {
   let score = document.getElementById('score');
   let scoreId = document.getElementById('scoreId');
-  scoreId.textContent = (`Score: ${scoreCount} beers`);
+  scoreId.textContent = (`Score: ${scoreCounter} beers`);
   score.append(scoreId);
-  const foodElement = document.createElement('div')
+  const foodElement = document.createElement('img')
+  foodElement.setAttribute("src","images/beer2.png")
   foodElement.style.gridRowStart = food.y
   foodElement.style.gridColumnStart = food.x
   foodElement.classList.add('food')
@@ -51,4 +52,8 @@ function getRandomFoodPosition() {
     newFoodPosition = randomGridPosition()
   }
   return newFoodPosition
+}
+
+export function scoreCount() {
+  return scoreCounter
 }

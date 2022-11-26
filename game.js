@@ -1,15 +1,21 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection } from './snake.js'
-import { update as updateFood, draw as drawFood } from './food.js'
+import { update as updateFood, draw as drawFood, scoreCount } from './food.js'
 import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
+let scoreCounter = 0;
 let gameOver = false
 const gameBoard = document.getElementById('game-board');
 
+let player = prompt("Enter name: ");
+
 function main(currentTime) {
   if (gameOver) {
-    if (confirm(`"You're drunk, go home playerID:${Date.now()}." -Alan`)) {
-      window.location.href = "/Anarchy-Snake-Game/Home.html"
+    scoreCounter = scoreCount();
+    if (confirm(`"You're drunk, go home ${player}." -Alan
+        Beers: ${scoreCounter}
+        Player ID: ${Date.now()}`)) {
+      window.location.href = "/Anarchy-Snake-Game/home.html"
     }
     return
   }

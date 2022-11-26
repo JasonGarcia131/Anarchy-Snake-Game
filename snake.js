@@ -18,7 +18,8 @@ export function update() {
 
 export function draw(gameBoard) {
   snakeBody.forEach(segment => {
-    const snakeElement = document.createElement('div')
+    const snakeElement = document.createElement('img')
+    snakeElement.setAttribute("src","./images/drunk.jpg")
     snakeElement.style.gridRowStart = segment.y
     snakeElement.style.gridColumnStart = segment.x
     snakeElement.classList.add('snake')
