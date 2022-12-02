@@ -8,13 +8,14 @@ let gameOver = false
 const gameBoard = document.getElementById('game-board');
 
 let player = prompt("Enter name: ");
+let igLink = "https://www.instagram.com/jayswitch131/"
 
 function main(currentTime) {
   if (gameOver) {
     scoreCounter = scoreCount();
     if (confirm(`"You're drunk, go home ${player}." -Alan
-        Beers: ${scoreCounter}
-        Player ID: ${Date.now()}`)) {
+        Beers: ${scoreCounter} Player ID: ${Date.now()}
+        `)) {
       window.location.href = "/Anarchy-Snake-Game/Home.html"
     }
     return
