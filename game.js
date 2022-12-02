@@ -15,7 +15,7 @@ function main(currentTime) {
     if (confirm(`"You're drunk, go home ${player}." -Alan
         Beers: ${scoreCounter}
         Player ID: ${Date.now()}`)) {
-      window.location.href = "/Home.html"
+      window.location.href = "Anarchy-Snake-Game/Home.html"
     }
     return
   }
