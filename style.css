@@ -1,0 +1,22 @@
+.homePageBox > a{
+    color: red;
+}
+
+.beerImage{
+    width: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.anarchyLogo{
+    width: 15px;
+    rotate: -90deg;
+    margin-left: 5px;
+    padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .homepageBackground {
+        width: 50vmin;
+    }
+  }
